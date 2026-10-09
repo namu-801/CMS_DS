@@ -1,0 +1,163 @@
+/*
+ * Figma `IconButton` 세트(156:15581)를 옮긴 스타일입니다.
+ * 색·크기·여백·모서리·그림자는 모두 src/tokens/tokens.css의 토큰만 씁니다. 원시 값을 넣지 마세요.
+ */
+
+.button {
+  --ib-bg: transparent;
+  --ib-border: transparent;
+  --ib-icon: var(--ib-tone);
+
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--ib-size);
+  height: var(--ib-size);
+  margin: var(--spacing-scale-0);
+  padding: var(--spacing-scale-0);
+  /* Figma 안쪽 정렬 선과 같음: box-sizing 덕분에 틀 크기는 그대로 */
+  border: var(--size-border-default) solid var(--ib-border);
+  border-radius: var(--radius-scale-0);
+  background-color: var(--ib-bg);
+  color: var(--ib-icon);
+  cursor: pointer;
+}
+
+/* ---------- Size (Figma Size, 틀 크기) ---------- */
+
+.s20 {
+  --ib-size: var(--size-icon-small);
+}
+.s24 {
+  --ib-size: var(--size-icon-medium);
+}
+.s40 {
+  --ib-size: var(--size-hit-medium);
+}
+.s48 {
+  --ib-size: var(--size-hit-large);
+}
+
+/* 20·24 틀: 보이는 크기는 그대로, 클릭 영역만 Size/Hit/Small(32)로 넓힘 */
+.extendHit::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--size-hit-small);
+  height: var(--size-hit-small);
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- Icon Color (Figma Icon Color) ---------- */
+
+.toneStrong {
+  --ib-tone: var(--foreground-neutral-secondary);
+}
+.toneDefault {
+  --ib-tone: var(--foreground-neutral-quaternary);
+}
+.tonePrimary {
+  --ib-tone: var(--foreground-neutral-primary);
+}
+
+/* ---------- Style: Default ---------- */
+
+.plain {
+  --ib-bg: transparent;
+}
+
+.outline {
+  --ib-bg: var(--surface-neutral-primary);
+  --ib-border: var(--border-neutral-secondary);
+}
+
+.primary {
+  --ib-bg: var(--surface-brand-strong);
+  /* 보라 배경 위라 Icon Color와 상관없이 흰색 */
+  --ib-icon: var(--foreground-neutral-inverse);
+}
+
+/* ---------- Hover / Pressed (선택된 버튼은 선택 모양 유지) ---------- */
+
+.plain:enabled:not([aria-pressed="true"]):hover {
+  --ib-bg: var(--interaction-neutral-fill-weak);
+}
+.plain:enabled:not([aria-pressed="true"]):active {
+  --ib-bg: var(--interaction-neutral-fill);
+}
+
+.outline:enabled:not([aria-pressed="true"]):hover {
+  --ib-bg: var(--interaction-neutral-fill-weak);
+  --ib-border: var(--interaction-neutral-active-border);
+}
+.outline:enabled:not([aria-pressed="true"]):active {
+  --ib-bg: var(--interaction-neutral-fill);
+  --ib-border: var(--interaction-neutral-active-border);
+}
+
+.primary:enabled:not([aria-pressed="true"]):hover {
+  --ib-bg: var(--interaction-brand-primary-hover);
+}
+.primary:enabled:not([aria-pressed="true"]):active {
+  --ib-bg: var(--interaction-brand-primary-pressed);
+}
+
+/* ---------- Selected (Figma State=Selected) ---------- */
+
+.plain[aria-pressed="true"],
+.outline[aria-pressed="true"] {
+  --ib-bg: var(--surface-brand-tertiary);
+  --ib-border: var(--border-brand-primary);
+  --ib-icon: var(--foreground-neutral-secondary);
+}
+
+/* 지도 위치 추가: 모드 전환을 보여 주는 예외 모양 */
+.primary[aria-pressed="true"] {
+  --ib-bg: var(--surface-neutral-primary);
+  --ib-border: var(--border-brand-strong);
+  --ib-icon: var(--foreground-brand-primary);
+}
+
+/* ---------- Disabled (Figma State=Disabled, selected보다 우선) ---------- */
+
+.button:disabled {
+  cursor: not-allowed;
+}
+.plain:disabled {
+  --ib-bg: transparent;
+  --ib-border: transparent;
+  --ib-icon: var(--foreground-neutral-disabled);
+}
+.outline:disabled {
+  --ib-bg: var(--surface-neutral-secondary);
+  --ib-border: var(--border-neutral-secondary);
+  --ib-icon: var(--foreground-neutral-disabled);
+}
+.primary:disabled {
+  --ib-bg: var(--surface-neutral-disabled);
+  --ib-border: transparent;
+  --ib-icon: var(--foreground-neutral-inverse);
+}
+
+/* ---------- Floating (Figma Floating) ---------- */
+
+.floating {
+  box-shadow: var(--elevation-low);
+}
+
+/* ---------- Focus (코드에만 있음, Button과 같은 규칙. Figma `Focus Ring · Guide` 173:15758) ---------- */
+
+.button:focus-visible {
+  outline: var(--size-border-thick) solid var(--border-brand-primary);
+  outline-offset: var(--spacing-scale-2);
+}
+
+@media (forced-colors: active) {
+  .button {
+    border-color: ButtonBorder;
+  }
+}

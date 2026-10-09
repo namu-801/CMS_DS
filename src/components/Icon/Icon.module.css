@@ -1,0 +1,29 @@
+.icon {
+  display: block;
+  flex: none;
+}
+
+.xsmall {
+  width: var(--size-icon-x-small);
+  height: var(--size-icon-x-small);
+}
+
+.small {
+  width: var(--size-icon-small);
+  height: var(--size-icon-small);
+}
+
+.medium {
+  width: var(--size-icon-medium);
+  height: var(--size-icon-medium);
+}
+
+.large {
+  width: var(--size-icon-large);
+  height: var(--size-icon-large);
+}
+
+.xlarge {
+  width: var(--size-icon-x-large);
+  height: var(--size-icon-x-large);
+}

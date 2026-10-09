@@ -1,0 +1,27 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-scale-32);
+  padding: var(--spacing-scale-40);
+  color: var(--foreground-neutral-primary);
+  background: var(--surface-neutral-tertiary);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-scale-12);
+  padding: var(--spacing-scale-24);
+  background: var(--surface-neutral-primary);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-scale-16);
+}
+
+.caption {
+  width: var(--spacing-scale-64);
+  color: var(--foreground-neutral-quaternary);
+}

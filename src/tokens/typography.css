@@ -1,0 +1,218 @@
+/* 자동 생성 파일입니다. 직접 고치지 마세요. Figma Text Style과 1:1 */
+.text-10-medium {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-10);
+  line-height: var(--font-line-height-10);
+  font-weight: var(--font-style-medium);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-10-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-10);
+  line-height: var(--font-line-height-10);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-10-bold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-10);
+  line-height: var(--font-line-height-10);
+  font-weight: var(--font-style-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-12-regular {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-12);
+  line-height: var(--font-line-height-12);
+  font-weight: var(--font-style-regular);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-12-medium {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-12);
+  line-height: var(--font-line-height-12);
+  font-weight: var(--font-style-medium);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-12-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-12);
+  line-height: var(--font-line-height-12);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-13-regular {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-13);
+  line-height: var(--font-line-height-13);
+  font-weight: var(--font-style-regular);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-13-medium {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-13);
+  line-height: var(--font-line-height-13);
+  font-weight: var(--font-style-medium);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-13-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-13);
+  line-height: var(--font-line-height-13);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-14-regular {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-regular);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-14-medium {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-medium);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-14-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-15-regular {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-15);
+  line-height: var(--font-line-height-15);
+  font-weight: var(--font-style-regular);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-15-medium {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-15);
+  line-height: var(--font-line-height-15);
+  font-weight: var(--font-style-medium);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-15-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-15);
+  line-height: var(--font-line-height-15);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-15-bold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-15);
+  line-height: var(--font-line-height-15);
+  font-weight: var(--font-style-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-16-regular {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-16);
+  line-height: var(--font-line-height-16);
+  font-weight: var(--font-style-regular);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-16-medium {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-16);
+  line-height: var(--font-line-height-16);
+  font-weight: var(--font-style-medium);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-16-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-16);
+  line-height: var(--font-line-height-16);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-16-bold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-16);
+  line-height: var(--font-line-height-16);
+  font-weight: var(--font-style-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-18-medium {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-18);
+  line-height: var(--font-line-height-18);
+  font-weight: var(--font-style-medium);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-18-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-18);
+  line-height: var(--font-line-height-18);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-20-medium {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-20);
+  line-height: var(--font-line-height-20);
+  font-weight: var(--font-style-medium);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-20-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-20);
+  line-height: var(--font-line-height-20);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-20-bold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-20);
+  line-height: var(--font-line-height-20);
+  font-weight: var(--font-style-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-22-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-22);
+  line-height: var(--font-line-height-22);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-24-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-24);
+  line-height: var(--font-line-height-24);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-30-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-30);
+  line-height: var(--font-line-height-30);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-32-bold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-32);
+  line-height: var(--font-line-height-32);
+  font-weight: var(--font-style-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-36-semibold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-36);
+  line-height: var(--font-line-height-36);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.text-72-bold {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-72);
+  line-height: var(--font-line-height-72);
+  font-weight: var(--font-style-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}

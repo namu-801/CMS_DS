@@ -1,0 +1,232 @@
+/*
+ * Figma `Button` 세트(96:15603)를 옮긴 스타일입니다.
+ * 색·간격·모서리·크기·글자는 모두 src/tokens/tokens.css의 토큰만 씁니다. 원시 값을 넣지 마세요.
+ */
+
+.button {
+  --btn-bg: transparent;
+  --btn-fg: var(--foreground-neutral-secondary);
+  --btn-border: transparent;
+
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--btn-gap);
+  height: var(--btn-height);
+  min-width: var(--size-hit-small);
+  margin: var(--spacing-scale-0);
+  padding-block: var(--spacing-scale-0);
+  /* 바깥 여백 = 아이콘 쪽 여백. 글자 쪽은 .label 여백이 더해집니다(Figma Label Wrap). */
+  padding-inline: var(--btn-pad);
+  border: none;
+  border-radius: var(--radius-scale-0);
+  background-color: var(--btn-bg);
+  color: var(--btn-fg);
+  /* Figma의 안쪽 정렬 선(Inside stroke)처럼 크기에 영향을 주지 않는 테두리 */
+  box-shadow: inset 0 0 0 var(--size-border-default) var(--btn-border);
+  font-family: var(--font-family-base);
+  letter-spacing: var(--font-letter-spacing-default);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+
+.label {
+  padding-inline: var(--spacing-scale-4);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* ---------- Size (Figma Size) ---------- */
+
+.xsmall {
+  --btn-height: var(--size-height-control-xsmall);
+  --btn-pad: var(--spacing-scale-8);
+  --btn-gap: var(--spacing-scale-0);
+  font-size: var(--font-size-13);
+  line-height: var(--font-line-height-13);
+  font-weight: var(--font-style-medium);
+}
+
+.small {
+  --btn-height: var(--size-height-control-small);
+  --btn-pad: var(--spacing-scale-12);
+  --btn-gap: var(--spacing-scale-0);
+  font-size: var(--font-size-15);
+  line-height: var(--font-line-height-15);
+  font-weight: var(--font-style-semi-bold);
+}
+
+.medium {
+  --btn-height: var(--size-height-control-medium);
+  --btn-pad: var(--spacing-scale-16);
+  --btn-gap: var(--spacing-scale-2);
+  font-size: var(--font-size-18);
+  line-height: var(--font-line-height-18);
+  font-weight: var(--font-style-semi-bold);
+}
+
+.large {
+  --btn-height: var(--size-height-control-large);
+  --btn-pad: var(--spacing-scale-20);
+  --btn-gap: var(--spacing-scale-4);
+  font-size: var(--font-size-20);
+  line-height: var(--font-line-height-20);
+  font-weight: var(--font-style-semi-bold);
+}
+
+.xlarge {
+  --btn-height: var(--size-height-control-xlarge);
+  --btn-pad: var(--spacing-scale-24);
+  --btn-gap: var(--spacing-scale-4);
+  font-size: var(--font-size-20);
+  line-height: var(--font-line-height-20);
+  font-weight: var(--font-style-semi-bold);
+}
+
+/* ---------- Style: Default (Figma State=Default, Loading) ---------- */
+
+.primary {
+  /* 흰 글자 대비 4.5 이상을 위해 Purple500 계열 사용(Surface/Brand/Primary 아님) */
+  --btn-bg: var(--surface-brand-strong);
+  --btn-fg: var(--foreground-neutral-inverse);
+}
+
+.secondary {
+  --btn-bg: var(--surface-brand-secondary);
+  --btn-fg: var(--foreground-neutral-inverse);
+}
+
+.neutral {
+  --btn-bg: var(--surface-neutral-inverse);
+  --btn-fg: var(--foreground-neutral-inverse);
+}
+
+.outline {
+  --btn-bg: var(--surface-neutral-primary);
+  --btn-fg: var(--foreground-neutral-secondary);
+  --btn-border: var(--border-neutral-secondary);
+}
+
+.outlineBrand {
+  --btn-bg: var(--surface-neutral-primary);
+  --btn-fg: var(--foreground-brand-primary);
+  --btn-border: var(--border-brand-primary);
+}
+
+.plain {
+  --btn-bg: transparent;
+  --btn-fg: var(--foreground-neutral-quaternary);
+}
+
+.destructive {
+  --btn-bg: var(--surface-negative-primary);
+  --btn-fg: var(--foreground-neutral-inverse);
+}
+
+/* ---------- Hover (Figma State=Hover) ---------- */
+
+.primary:enabled:not([aria-busy="true"]):hover {
+  --btn-bg: var(--interaction-brand-primary-hover);
+}
+.secondary:enabled:not([aria-busy="true"]):hover {
+  --btn-bg: var(--interaction-brand-secondary-hover);
+}
+.neutral:enabled:not([aria-busy="true"]):hover {
+  --btn-bg: var(--interaction-neutral-inverse-hover);
+}
+.outline:enabled:not([aria-busy="true"]):hover,
+.plain:enabled:not([aria-busy="true"]):hover {
+  --btn-bg: var(--interaction-neutral-fill);
+}
+.outlineBrand:enabled:not([aria-busy="true"]):hover {
+  --btn-bg: var(--interaction-brand-subtle-hover);
+}
+.destructive:enabled:not([aria-busy="true"]):hover {
+  --btn-bg: var(--interaction-negative-primary-hover);
+}
+
+/* ---------- Pressed (Figma State=Pressed) ---------- */
+
+.primary:enabled:not([aria-busy="true"]):active {
+  --btn-bg: var(--interaction-brand-primary-pressed);
+}
+.secondary:enabled:not([aria-busy="true"]):active {
+  --btn-bg: var(--interaction-brand-secondary-pressed);
+}
+.neutral:enabled:not([aria-busy="true"]):active {
+  --btn-bg: var(--interaction-neutral-inverse-pressed);
+}
+.outline:enabled:not([aria-busy="true"]):active,
+.plain:enabled:not([aria-busy="true"]):active {
+  --btn-bg: var(--interaction-neutral-fill-strong);
+  --btn-border: var(--interaction-neutral-active-border);
+}
+.outlineBrand:enabled:not([aria-busy="true"]):active {
+  --btn-bg: var(--interaction-brand-subtle-pressed);
+}
+.destructive:enabled:not([aria-busy="true"]):active {
+  --btn-bg: var(--interaction-negative-primary-pressed);
+}
+
+/* ---------- Disabled (Figma State=Disabled) ---------- */
+
+.button:disabled {
+  cursor: not-allowed;
+}
+.primary:disabled,
+.secondary:disabled,
+.neutral:disabled,
+.destructive:disabled {
+  --btn-bg: var(--surface-neutral-disabled);
+  --btn-fg: var(--foreground-neutral-inverse);
+}
+.outline:disabled,
+.outlineBrand:disabled {
+  --btn-bg: var(--surface-neutral-secondary);
+  --btn-fg: var(--foreground-neutral-subtle);
+  --btn-border: var(--border-neutral-secondary);
+}
+.plain:disabled {
+  --btn-bg: transparent;
+  --btn-fg: var(--foreground-neutral-subtle);
+}
+
+/* ---------- Loading (Figma State=Loading) ---------- */
+
+.button[aria-busy="true"] {
+  cursor: progress;
+}
+
+.spinner {
+  animation: button-spin 1s linear infinite;
+}
+
+@keyframes button-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+  }
+}
+
+/* ---------- Focus (코드에만 있음. 2026-10-09 확정, Figma `Focus Ring · Guide` 173:15758) ---------- */
+
+.button:focus-visible {
+  outline: var(--size-border-thick) solid var(--border-brand-primary);
+  outline-offset: var(--spacing-scale-2);
+}
+
+/* 고대비 모드에서는 box-shadow 테두리가 사라지므로 시스템 테두리를 그립니다. */
+@media (forced-colors: active) {
+  .button {
+    border: var(--size-border-default) solid ButtonBorder;
+  }
+}
