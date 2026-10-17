@@ -47,10 +47,10 @@
   --blue-300: #80caea;
   --blue-400: #55bbe4;
   --blue-500: #00acdd;
-  --blue-600: #068dbb;
-  --blue-700: #01709a;
-  --blue-800: #025579;
-  --blue-900: #003b59;
+  --blue-600: #118ac5;
+  --blue-700: #0b6ca9;
+  --blue-800: #06508b;
+  --blue-900: #02356c;
   --navy-0: #f1f5fb;
   --navy-100: #eaedf2;
   --navy-200: #c4d2ee;
@@ -79,8 +79,10 @@
   --foreground-brand-primary: var(--purple-500);
   --foreground-brand-secondary: var(--purple-400);
   --foreground-negative-primary: var(--red-500);
+  --foreground-negative-strong: var(--red-600);
   --foreground-fail-primary: var(--orange-500);
   --foreground-success-primary: var(--blue-500);
+  --foreground-success-strong: var(--blue-700);
   --foreground-positive-primary: var(--green-500);
   --foreground-positive-inverse: var(--green-0);
   --foreground-location-selected: var(--violet-500);
@@ -125,6 +127,7 @@
   --border-location-selected: var(--violet-500);
   --border-negative-primary: var(--red-500);
   --border-success-primary: var(--blue-500);
+  --border-success-strong: var(--blue-600);
   --interaction-brand-primary-hover: var(--purple-600);
   --interaction-brand-primary-pressed: var(--purple-700);
   --interaction-brand-secondary-hover: var(--navy-800);

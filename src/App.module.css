@@ -25,3 +25,22 @@
   width: var(--spacing-scale-64);
   color: var(--foreground-neutral-quaternary);
 }
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--size-hit-large) * 5), 1fr));
+  gap: var(--spacing-scale-24);
+  align-items: start;
+}
+
+/* GPS 위치명: 입력칸만 남은 너비를 채우고 버튼과 간격 8 */
+.gpsRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-scale-8);
+  max-width: calc(var(--size-hit-large) * 6);
+}
+
+.gpsInput {
+  flex: 1 1 auto;
+}

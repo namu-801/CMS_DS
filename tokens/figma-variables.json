@@ -1,5 +1,5 @@
 {
-  "$source": "Figma CMS_DesignSystem (9BdIyKsIRp6Yql2bPzDc7s) Local Variables + Text Styles, exported 2026-10-08",
+  "$source": "Figma CMS_DesignSystem (9BdIyKsIRp6Yql2bPzDc7s) Local Variables + Text Styles, exported 2026-10-08, updated 2026-10-16",
   "$format": "[Figma 이름, WEB 코드 이름, 값]. 값이 '@'로 시작하면 다른 Variable을 참조(Alias). effects: [Figma Effect Style 이름, 코드 이름, 그림자 목록]",
   "atomic": [
     [
@@ -235,22 +235,22 @@
     [
       "Blue/Blue600",
       "var(--blue-600)",
-      "#068DBB"
+      "#118AC5"
     ],
     [
       "Blue/Blue700",
       "var(--blue-700)",
-      "#01709A"
+      "#0B6CA9"
     ],
     [
       "Blue/Blue800",
       "var(--blue-800)",
-      "#025579"
+      "#06508B"
     ],
     [
       "Blue/Blue900",
       "var(--blue-900)",
-      "#003B59"
+      "#02356C"
     ],
     [
       "Navy/Navy0",
@@ -385,6 +385,11 @@
       "@Red/Red500"
     ],
     [
+      "Foreground/Negative/Strong",
+      "var(--foreground-negative-strong)",
+      "@Red/Red600"
+    ],
+    [
       "Foreground/Fail/Primary",
       "var(--foreground-fail-primary)",
       "@Orange/Orange500"
@@ -393,6 +398,11 @@
       "Foreground/Success/Primary",
       "var(--foreground-success-primary)",
       "@Blue/Blue500"
+    ],
+    [
+      "Foreground/Success/Strong",
+      "var(--foreground-success-strong)",
+      "@Blue/Blue700"
     ],
     [
       "Foreground/Positive/Primary",
@@ -613,6 +623,11 @@
       "Border/Success/Primary",
       "var(--border-success-primary)",
       "@Blue/Blue500"
+    ],
+    [
+      "Border/Success/Strong",
+      "var(--border-success-strong)",
+      "@Blue/Blue600"
     ],
     [
       "Interaction/Brand/PrimaryHover",

@@ -1,0 +1,195 @@
+/*
+ * Figma `TextField` 세트(188:16373)를 옮긴 스타일입니다.
+ * 색·간격·모서리·크기·글자는 모두 src/tokens/tokens.css의 토큰만 씁니다. 원시 값을 넣지 마세요.
+ */
+
+.root {
+  --tf-border: var(--border-neutral-tertiary);
+  --tf-bg: var(--surface-neutral-primary);
+  --tf-text: var(--foreground-neutral-secondary);
+  --tf-placeholder: var(--foreground-neutral-quaternary);
+  --tf-icon: var(--foreground-neutral-quaternary);
+  --tf-message: var(--foreground-neutral-quaternary);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-scale-6);
+  width: 100%;
+  min-width: 0;
+  font-family: var(--font-family-base);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+
+/* ---------- 제목 (Figma Label Row) ---------- */
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-scale-6);
+  /* 아래 여백 4 + 묶음 간격 6 = 칸과 10 (Figma와 같음) */
+  padding-bottom: var(--spacing-scale-4);
+}
+
+.label {
+  color: var(--foreground-neutral-secondary);
+  font-size: var(--font-size-15);
+  line-height: var(--font-line-height-15);
+  font-weight: var(--font-style-semi-bold);
+}
+
+.required {
+  color: var(--foreground-brand-primary);
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-regular);
+}
+
+/* Figma Label을 끈 상태: 화면에서만 숨기고 스크린리더는 읽음 */
+.visuallyHidden {
+  position: absolute;
+  width: var(--size-border-default);
+  height: var(--size-border-default);
+  margin: var(--spacing-scale-0);
+  padding: var(--spacing-scale-0);
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- 입력칸 (Figma Field) ---------- */
+
+.field {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-scale-8);
+  height: var(--tf-height);
+  padding-block: var(--spacing-scale-0);
+  padding-inline: var(--tf-pad);
+  /* Figma 안쪽 정렬 선과 같음: box-sizing 덕분에 높이는 그대로 */
+  border: var(--size-border-default) solid var(--tf-border);
+  border-radius: var(--radius-scale-0);
+  background-color: var(--tf-bg);
+}
+
+.icon {
+  flex: none;
+  color: var(--tf-icon);
+}
+
+.input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  margin: var(--spacing-scale-0);
+  padding: var(--spacing-scale-0);
+  border: 0;
+  background: transparent;
+  color: var(--tf-text);
+  caret-color: var(--foreground-neutral-primary);
+  font: inherit;
+  font-size: var(--tf-font-size);
+  line-height: var(--tf-line-height);
+  font-weight: var(--tf-font-weight);
+  letter-spacing: inherit;
+  text-overflow: ellipsis;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--tf-placeholder);
+  opacity: 1;
+}
+
+/* ---------- 아래 문구 (Figma Message) ---------- */
+
+.message {
+  margin: var(--spacing-scale-0);
+  color: var(--tf-message);
+  font-size: var(--font-size-12);
+  line-height: var(--font-line-height-12);
+  font-weight: var(--font-style-regular);
+}
+
+/* ---------- Size (Figma Size) ---------- */
+
+.xsmall {
+  --tf-height: var(--size-height-control-xsmall);
+  --tf-pad: var(--spacing-scale-8);
+  --tf-font-size: var(--font-size-13);
+  --tf-line-height: var(--font-line-height-13);
+  --tf-font-weight: var(--font-style-medium);
+}
+.small {
+  --tf-height: var(--size-height-control-small);
+  --tf-pad: var(--spacing-scale-12);
+  --tf-font-size: var(--font-size-14);
+  --tf-line-height: var(--font-line-height-14);
+  --tf-font-weight: var(--font-style-regular);
+}
+.medium {
+  --tf-height: var(--size-height-control-medium);
+  --tf-pad: var(--spacing-scale-16);
+  --tf-font-size: var(--font-size-15);
+  --tf-line-height: var(--font-line-height-15);
+  --tf-font-weight: var(--font-style-regular);
+}
+.large {
+  --tf-height: var(--size-height-control-large);
+  --tf-pad: var(--spacing-scale-20);
+  --tf-font-size: var(--font-size-15);
+  --tf-line-height: var(--font-line-height-15);
+  --tf-font-weight: var(--font-style-regular);
+}
+
+/* ---------- State: Hover / Focus (브라우저가 정함, 모든 크기 같음) ---------- */
+
+.root:not(.disabled):not(.error):not(.success) .field:hover {
+  --tf-border: var(--border-neutral-strong);
+}
+/* 입력 중(Figma Focus): 두께는 그대로, 색만 보라. 마우스로 눌러도 보임 */
+.root:not(.disabled):not(.error):not(.success) .field:focus-within {
+  --tf-border: var(--border-brand-primary);
+}
+
+/* ---------- State: Error / Success (마우스 올림·입력 중에도 색 유지) ---------- */
+
+.error {
+  --tf-message: var(--foreground-negative-strong);
+}
+.error .field {
+  --tf-border: var(--border-negative-primary);
+}
+.success {
+  --tf-message: var(--foreground-success-strong);
+}
+.success .field {
+  --tf-border: var(--border-success-strong);
+}
+
+/* ---------- State: Disabled ---------- */
+
+.disabled {
+  --tf-text: var(--foreground-neutral-subtle);
+  --tf-placeholder: var(--foreground-neutral-subtle);
+  --tf-icon: var(--foreground-neutral-subtle);
+  --tf-message: var(--foreground-neutral-subtle);
+}
+.disabled .field {
+  --tf-border: var(--border-neutral-secondary);
+  --tf-bg: var(--surface-neutral-secondary);
+}
+.disabled .input {
+  cursor: not-allowed;
+}
+
+@media (forced-colors: active) {
+  .field {
+    border-color: FieldText;
+  }
+  .field:focus-within {
+    outline: var(--size-border-thick) solid Highlight;
+  }
+}

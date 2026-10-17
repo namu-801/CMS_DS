@@ -1,5 +1,7 @@
 import { Button, BUTTON_SIZES, BUTTON_VARIANTS } from "@/components/Button";
+import { useState } from "react";
 import { IconButton, ICON_BUTTON_VARIANTS } from "@/components/IconButton";
+import { TextField, TEXT_FIELD_SIZES } from "@/components/TextField";
 import styles from "./App.module.css";
 
 /** Figma Button 세트와 나란히 비교하기 위한 확인용 화면 */
@@ -56,6 +58,52 @@ export function App() {
           <IconButton variant="plain" size={20} icon="arrow_down" iconColor="default" label="펼치기" />
         </div>
       </section>
+      <h1 className="text-24-semibold">TextField</h1>
+      {TEXT_FIELD_SIZES.map((size) => (
+        <section key={size} className={styles.section}>
+          <h2 className="text-16-semibold">{size}</h2>
+          <div className={styles.fieldGrid}>
+            <TextField size={size} label="기본" placeholder="안내 문구" message="마우스를 올리거나 눌러 보세요" />
+            <TextField size={size} label="입력됨" defaultValue="입력한 내용" />
+            <TextField size={size} label="오류" status="error" defaultValue="abc" message="이메일 형식이 아닙니다." />
+            <TextField size={size} label="성공" status="success" defaultValue="abc@gmail.com" message="사용 가능합니다." />
+            <TextField size={size} label="비활성" disabled defaultValue="00 : 00 : 00" />
+          </div>
+        </section>
+      ))}
+      <section className={styles.section}>
+        <h2 className="text-16-semibold">시안 쓰임 예</h2>
+        <div className={styles.fieldGrid}>
+          <TextField size="large" label="이메일" hideLabel type="email" placeholder="이메일" />
+          <PasswordExample />
+          <TextField size="large" label="이름" required placeholder="이름" />
+          <TextField size="medium" label="차량 검색" hideLabel type="search" leadingIcon="action_search" placeholder="차량번호, 운전자 검색하기" />
+        </div>
+        <div className={styles.gpsRow}>
+          <TextField size="xsmall" label="위치명" hideLabel placeholder="위치명을 입력해주세요." className={styles.gpsInput} />
+          <IconButton variant="outline" size={24} icon="action_check" label="위치명 저장" />
+          <IconButton variant="outline" size={24} icon="action_close" label="위치명 수정 취소" />
+        </div>
+      </section>
     </main>
+  );
+}
+
+/** 비밀번호 보기·숨기기: 상태에 따라 아이콘과 버튼 이름을 함께 바꿉니다. */
+function PasswordExample() {
+  const [visible, setVisible] = useState(false);
+  return (
+    <TextField
+      size="large"
+      label="비밀번호"
+      required
+      type={visible ? "text" : "password"}
+      placeholder="영문, 특수문자, 숫자 혼합 8~12자"
+      trailingAction={{
+        icon: visible ? "action_visibility" : "action_visibility_off",
+        label: visible ? "비밀번호 숨기기" : "비밀번호 보기",
+        onClick: () => setVisible((v) => !v),
+      }}
+    />
   );
 }
