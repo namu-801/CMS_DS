@@ -118,7 +118,6 @@ export const colorTokens = {
   "Border/Neutral/Secondary": "var(--border-neutral-secondary)",
   "Border/Neutral/Tertiary": "var(--border-neutral-tertiary)",
   "Border/Neutral/Strong": "var(--border-neutral-strong)",
-  "Border/Neutral/Disabled": "var(--border-neutral-disabled)",
   "Border/Neutral/Inverse": "var(--border-neutral-inverse)",
   "Border/Brand/Primary": "var(--border-brand-primary)",
   "Border/Brand/Strong": "var(--border-brand-strong)",

@@ -19,6 +19,7 @@
 | Button | 글자가 있는 버튼 | [10_버튼_계약.md](../design-system/10_버튼_계약.md) | [src/components/Button](components/Button) |
 | IconButton | 아이콘만 있는 버튼 | [13_아이콘버튼_계약.md](../design-system/13_아이콘버튼_계약.md) | [src/components/IconButton](components/IconButton) |
 | TextField | 한 줄 입력창 | [16_텍스트필드_계약.md](../design-system/16_텍스트필드_계약.md) | [src/components/TextField](components/TextField) |
+| Radio | 여러 선택지 중 하나 고르기(`Radio` + `RadioGroup`) | [19_라디오_계약.md](../design-system/19_라디오_계약.md) | [src/components/Radio](components/Radio) |
 | Icon | 장식용 아이콘(다른 컴포넌트 안에서 씀). 계약 대신 네이밍 규칙 | [07_아이콘_네이밍_규칙.md](../design-system/07_아이콘_네이밍_규칙.md) | [src/components/Icon](components/Icon) |
 
 ## 컴포넌트를 정한 근거 (조사 → 스펙안)
@@ -26,6 +27,7 @@
 - [08_버튼_조사.md](../design-system/08_버튼_조사.md) · [09_버튼_스펙안.md](../design-system/09_버튼_스펙안.md) — Button을 조사하고 결정한 기록.
 - [11_아이콘버튼_조사.md](../design-system/11_아이콘버튼_조사.md) · [12_아이콘버튼_스펙안.md](../design-system/12_아이콘버튼_스펙안.md) — IconButton을 조사하고 결정한 기록.
 - [14_텍스트필드_조사.md](../design-system/14_텍스트필드_조사.md) · [15_텍스트필드_스펙안.md](../design-system/15_텍스트필드_스펙안.md) — TextField를 조사하고 결정한 기록.
+- [17_라디오_조사.md](../design-system/17_라디오_조사.md) · [18_라디오_스펙안.md](../design-system/18_라디오_스펙안.md) — Radio를 조사하고 결정한 기록.
 - [06_아이콘_조사.md](../design-system/06_아이콘_조사.md) — 시안 아이콘 조사.
 
 ## 기초 정리 기록

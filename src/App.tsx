@@ -2,6 +2,7 @@ import { Button, BUTTON_SIZES, BUTTON_VARIANTS } from "@/components/Button";
 import { useState } from "react";
 import { IconButton, ICON_BUTTON_VARIANTS } from "@/components/IconButton";
 import { TextField, TEXT_FIELD_SIZES } from "@/components/TextField";
+import { Radio, RadioGroup } from "@/components/Radio";
 import styles from "./App.module.css";
 
 /** Figma Button 세트와 나란히 비교하기 위한 확인용 화면 */
@@ -84,6 +85,28 @@ export function App() {
           <IconButton variant="outline" size={24} icon="action_check" label="위치명 저장" />
           <IconButton variant="outline" size={24} icon="action_close" label="위치명 수정 취소" />
         </div>
+      </section>
+      <h1 className="text-24-semibold">Radio</h1>
+      <section className={styles.section}>
+        <h2 className="text-16-semibold">상태</h2>
+        <RadioGroup label="상태 예시" defaultValue="on">
+          <Radio value="off" label="기본" />
+          <Radio value="on" label="선택" />
+          <Radio value="dis" label="비활성" disabled />
+        </RadioGroup>
+        <RadioGroup label="선택된 비활성" defaultValue="b" disabled>
+          <Radio value="a" label="선택 안 됨" />
+          <Radio value="b" label="선택됨" />
+        </RadioGroup>
+        <RadioGroup label="세로 배치" orientation="vertical" defaultValue="video">
+          <Radio value="video" label="비디오" />
+          <Radio value="audio" label="오디오" />
+          <Radio value="image" label="이미지" />
+        </RadioGroup>
+        <RadioGroup label="표 행 선택(글자 숨김)" hideLabel defaultValue="1">
+          <Radio value="1" label="소노펠리체 CC 시설 안내 영상" hideLabel />
+          <Radio value="2" label="소노펠리체 CC 광고 촬영 영상" hideLabel />
+        </RadioGroup>
       </section>
     </main>
   );

@@ -585,11 +585,6 @@
       "@Neutral/Neutral600"
     ],
     [
-      "Border/Neutral/Disabled",
-      "var(--border-neutral-disabled)",
-      "@Neutral/Neutral400"
-    ],
-    [
       "Border/Neutral/Inverse",
       "var(--border-neutral-inverse)",
       "@Neutral/Neutral0"
