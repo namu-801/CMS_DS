@@ -3,6 +3,7 @@ import { useState } from "react";
 import { IconButton, ICON_BUTTON_VARIANTS } from "@/components/IconButton";
 import { TextField, TEXT_FIELD_SIZES } from "@/components/TextField";
 import { Radio, RadioGroup } from "@/components/Radio";
+import { Checkbox } from "@/components/Checkbox";
 import styles from "./App.module.css";
 
 /** Figma Button 세트와 나란히 비교하기 위한 확인용 화면 */
@@ -107,6 +108,25 @@ export function App() {
           <Radio value="1" label="소노펠리체 CC 시설 안내 영상" hideLabel />
           <Radio value="2" label="소노펠리체 CC 광고 촬영 영상" hideLabel />
         </RadioGroup>
+      </section>
+      <h1 className="text-24-semibold">Checkbox</h1>
+      <section className={styles.section}>
+        <h2 className="text-16-semibold">상태</h2>
+        <div className={styles.row}>
+          <Checkbox label="꺼짐" />
+          <Checkbox label="켜짐" defaultChecked />
+          <Checkbox label="꺼짐 비활성" disabled />
+          <Checkbox label="켜짐 비활성" defaultChecked disabled />
+          <Checkbox label="글자 숨김" hideLabel />
+        </div>
+        <Checkbox
+          label={
+            <>
+              가입 시 <strong>이용약관</strong> 및 <strong>개인정보처리방침</strong>에 동의하는 것으로 간주합니다.
+            </>
+          }
+          message="약관에 동의해 주세요."
+        />
       </section>
     </main>
   );
