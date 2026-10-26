@@ -1,5 +1,5 @@
 {
-  "$source": "Figma CMS_DesignSystem (9BdIyKsIRp6Yql2bPzDc7s) Local Variables + Text Styles, exported 2026-10-08, updated 2026-10-16",
+  "$source": "Figma CMS_DesignSystem (9BdIyKsIRp6Yql2bPzDc7s) Local Variables + Text Styles, exported 2026-10-08, updated 2026-10-16, 2026-10-27",
   "$format": "[Figma 이름, WEB 코드 이름, 값]. 값이 '@'로 시작하면 다른 Variable을 참조(Alias). effects: [Figma Effect Style 이름, 코드 이름, 그림자 목록]",
   "atomic": [
     [
@@ -748,6 +748,21 @@
       "Chart/Area/End",
       "var(--chart-area-end)",
       "#FFFFFF00"
+    ],
+    [
+      "Foreground/Positive/Strong",
+      "var(--foreground-positive-strong)",
+      "@Green/Green700"
+    ],
+    [
+      "Foreground/Brand/Strong",
+      "var(--foreground-brand-strong)",
+      "@Purple/Purple600"
+    ],
+    [
+      "Surface/Negative/Strong",
+      "var(--surface-negative-strong)",
+      "@Red/Red600"
     ]
   ],
   "foundation": [
@@ -1145,6 +1160,51 @@
       "Font/LetterSpacing/Default",
       "var(--font-letter-spacing-default)",
       0
+    ],
+    [
+      "Size/Width/Navigation",
+      "var(--size-width-navigation)",
+      260
+    ],
+    [
+      "Size/Width/DialogSmall",
+      "var(--size-width-dialog-small)",
+      400
+    ],
+    [
+      "Size/Width/DialogMedium",
+      "var(--size-width-dialog-medium)",
+      680
+    ],
+    [
+      "Size/Width/DialogLarge",
+      "var(--size-width-dialog-large)",
+      1100
+    ],
+    [
+      "Size/Width/DialogButton",
+      "var(--size-width-dialog-button)",
+      100
+    ],
+    [
+      "Size/Width/DialogButtonWide",
+      "var(--size-width-dialog-button-wide)",
+      216
+    ],
+    [
+      "Size/Height/DialogSmall",
+      "var(--size-height-dialog-small)",
+      480
+    ],
+    [
+      "Size/Height/DialogMedium",
+      "var(--size-height-dialog-medium)",
+      480
+    ],
+    [
+      "Size/Height/DialogLarge",
+      "var(--size-height-dialog-large)",
+      700
     ]
   ],
   "textStyles": [

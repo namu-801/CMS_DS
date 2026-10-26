@@ -1,0 +1,114 @@
+/*
+ * Figma `Tab`·`Tab List`(237:16027)를 옮긴 스타일입니다. 토큰만 씁니다.
+ * 선택 막대 두께 6은 Spacing/Scale/6에 연결(2026-10-27 결정, 두께 토큰 대신 빌려 씀).
+ */
+
+.root {
+  display: flex;
+  min-width: 0;
+  font-family: var(--font-family-base);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.horizontal {
+  flex-direction: column;
+}
+.vertical {
+  flex-direction: row;
+}
+
+/* ---------- 탭 묶음 (Figma Tab List) ---------- */
+
+.list {
+  display: flex;
+}
+.horizontal .list {
+  flex-direction: row;
+  border-bottom: var(--size-border-default) solid var(--border-neutral-secondary);
+}
+.vertical .list {
+  flex-direction: column;
+  flex: none;
+  padding-top: var(--spacing-scale-20);
+  border-right: var(--size-border-default) solid var(--border-neutral-secondary);
+}
+
+/* ---------- 탭 하나 (Figma Tab) ---------- */
+
+.tab {
+  --tab-bg: transparent;
+  --tab-fg: var(--foreground-neutral-quaternary);
+  --tab-bar: transparent;
+
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-scale-0);
+  border: 0;
+  border-radius: var(--radius-scale-0);
+  background-color: var(--tab-bg);
+  color: var(--tab-fg);
+  font: inherit;
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-semi-bold);
+  cursor: pointer;
+}
+.text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 가로: 높이 48, 좌우 여백 32, 아래 막대 */
+.horizontal .tab {
+  justify-content: center;
+  height: var(--size-height-control-medium);
+  padding: 0 var(--spacing-scale-32);
+  box-shadow: inset 0 calc(-1 * var(--spacing-scale-6)) 0 var(--tab-bar);
+}
+/* 세로: 240 × 56, 왼쪽 막대, 글자 왼쪽 여백 24(+ 막대 6) */
+.vertical .tab {
+  justify-content: flex-start;
+  width: 100%;
+  height: var(--size-height-row);
+  padding: 0 var(--spacing-scale-24) 0 calc(var(--spacing-scale-6) + var(--spacing-scale-24));
+  box-shadow: inset var(--spacing-scale-6) 0 0 var(--tab-bar);
+  text-align: left;
+}
+
+/* State=Hover */
+.tab:not(:disabled):not([aria-selected="true"]):hover {
+  --tab-bg: var(--interaction-brand-subtle-hover);
+  --tab-fg: var(--foreground-neutral-tertiary);
+}
+/* State=Selected */
+.tab[aria-selected="true"] {
+  --tab-bg: var(--surface-brand-tertiary);
+  --tab-fg: var(--foreground-neutral-secondary);
+  --tab-bar: var(--surface-brand-primary);
+}
+/* State=Disabled */
+.tab:disabled {
+  --tab-bg: var(--surface-neutral-secondary);
+  --tab-fg: var(--foreground-neutral-subtle);
+  cursor: not-allowed;
+}
+/* 포커스(코드에만, Button과 같은 링) */
+.tab:focus-visible {
+  outline: var(--size-border-thick) solid var(--border-brand-primary);
+  outline-offset: calc(-1 * var(--size-border-thick));
+}
+
+.panel {
+  flex: 1;
+  min-width: 0;
+}
+.panel:focus-visible {
+  outline: var(--size-border-thick) solid var(--border-brand-primary);
+}
+
+@media (forced-colors: active) {
+  .tab[aria-selected="true"] {
+    text-decoration: underline;
+  }
+}

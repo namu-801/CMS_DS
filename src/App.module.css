@@ -44,3 +44,38 @@
 .gpsInput {
   flex: 1 1 auto;
 }
+
+/* ---------- 2026-10-27 새 컴포넌트 확인용 ---------- */
+.rowTop {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing-scale-16);
+}
+/* 확인용 너비(화면에서 정하는 값) */
+.demoNarrow {
+  width: calc(var(--size-hit-large) * 4);
+}
+.demoVerticalTabs {
+  height: calc(var(--size-height-row) * 6);
+  border: var(--size-border-default) solid var(--border-neutral-secondary);
+}
+.demoVerticalTabs [role="tablist"] {
+  width: calc(var(--size-hit-large) * 5);
+}
+.demoPanel {
+  margin: var(--spacing-scale-0);
+  padding: var(--spacing-scale-32) var(--spacing-scale-40);
+}
+.demoShell {
+  display: flex;
+  min-height: calc(var(--size-height-row) * 12);
+  background: var(--surface-neutral-tertiary);
+}
+.demoShellMain {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-scale-8);
+  padding: 0 var(--spacing-scale-40) var(--spacing-scale-40);
+}

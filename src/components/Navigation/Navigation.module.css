@@ -1,0 +1,169 @@
+/*
+ * Figma `Navigation · Component`(250:16294): Left Navigation Bar·Nav Item·Top Bar·Top Bar Action·Page Title.
+ * 토큰만 씁니다.
+ */
+
+/* ---------- 좌측 네비게이션바 ---------- */
+
+.bar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-scale-56);
+  flex: none;
+  width: var(--size-width-navigation);
+  min-height: 100%;
+  padding: var(--spacing-scale-36) var(--spacing-scale-20);
+  background-color: var(--surface-brand-secondary);
+  font-family: var(--font-family-base);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  color: var(--foreground-neutral-inverse);
+}
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-scale-56);
+}
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-scale-8);
+}
+.groupTitle {
+  margin: var(--spacing-scale-0);
+  color: var(--foreground-neutral-inverse);
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-semi-bold);
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-scale-4);
+  margin: var(--spacing-scale-0);
+  padding: var(--spacing-scale-0);
+  list-style: none;
+}
+
+/* ---------- 메뉴 항목 ---------- */
+
+.navItem {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-scale-10);
+  width: 100%;
+  height: var(--size-height-control-small);
+  margin: var(--spacing-scale-0);
+  padding: 0 var(--spacing-scale-10);
+  border: 0;
+  border-radius: var(--radius-scale-4);
+  background-color: transparent;
+  color: var(--foreground-neutral-inverse);
+  font: inherit;
+  font-size: var(--font-size-16);
+  line-height: var(--font-line-height-16);
+  font-weight: var(--font-style-semi-bold);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navLabel {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* State=Hover */
+.navItem:not(.selected):hover {
+  background-color: var(--interaction-brand-secondary-pressed);
+}
+/* State=Selected */
+.selected {
+  background-color: var(--surface-neutral-primary);
+  color: var(--foreground-neutral-secondary);
+}
+.navItem:focus-visible {
+  outline: var(--size-border-thick) solid var(--border-neutral-inverse);
+  outline-offset: var(--spacing-scale-2);
+}
+
+/* ---------- 상단 바 ---------- */
+
+.topBar {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-scale-32);
+  width: 100%;
+  height: var(--size-height-bar);
+  padding-right: var(--spacing-scale-40);
+  font-family: var(--font-family-base);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-scale-6);
+}
+.greeting {
+  color: var(--foreground-neutral-secondary);
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-medium);
+  white-space: nowrap;
+}
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-scale-4);
+  margin: var(--spacing-scale-0);
+  padding: var(--spacing-scale-0);
+  border: 0;
+  background: none;
+  color: var(--foreground-neutral-secondary);
+  font: inherit;
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-medium);
+  white-space: nowrap;
+  cursor: pointer;
+}
+/* State=Hover */
+.action:hover {
+  color: var(--foreground-neutral-primary);
+}
+.action:focus-visible {
+  outline: var(--size-border-thick) solid var(--border-brand-primary);
+  outline-offset: var(--spacing-scale-2);
+}
+
+/* ---------- 화면 제목 ---------- */
+
+.pageTitle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-scale-4);
+  font-family: var(--font-family-base);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.pageTitleText {
+  margin: var(--spacing-scale-0);
+  color: var(--foreground-neutral-primary);
+  font-size: var(--font-size-36);
+  line-height: var(--font-line-height-36);
+  font-weight: var(--font-style-semi-bold);
+}
+.pageDescription {
+  margin: var(--spacing-scale-0);
+  color: var(--foreground-neutral-tertiary);
+  font-size: var(--font-size-16);
+  line-height: var(--font-line-height-16);
+  font-weight: var(--font-style-regular);
+}

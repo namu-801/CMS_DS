@@ -1,0 +1,169 @@
+/*
+ * Figma `Dropdown`·`Dropdown Option`·`Dropdown Menu`(232:15968)를 옮긴 스타일입니다.
+ * 칸 모양은 TextField와 같습니다. 색·간격·모서리·크기·글자는 모두 토큰만 씁니다.
+ */
+
+.root {
+  --dd-height: var(--size-height-control-medium);
+  --dd-pad: var(--spacing-scale-16);
+  --dd-font: var(--font-size-15);
+  --dd-line: var(--font-line-height-15);
+  --dd-border: var(--border-neutral-secondary);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-scale-10);
+  width: 100%;
+  min-width: 0;
+  font-family: var(--font-family-base);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.small {
+  --dd-height: var(--size-height-control-small);
+  --dd-pad: var(--spacing-scale-12);
+  --dd-font: var(--font-size-14);
+  --dd-line: var(--font-line-height-14);
+}
+
+.label {
+  color: var(--foreground-neutral-secondary);
+  font-size: var(--font-size-15);
+  line-height: var(--font-line-height-15);
+  font-weight: var(--font-style-semi-bold);
+}
+
+.anchor {
+  position: relative;
+}
+
+/* ---------- 칸 (Figma Dropdown) ---------- */
+
+.field {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-scale-8);
+  width: 100%;
+  height: var(--dd-height);
+  margin: var(--spacing-scale-0);
+  padding: 0 var(--dd-pad);
+  border: var(--size-border-default) solid var(--dd-border);
+  border-radius: var(--radius-scale-0);
+  background-color: var(--surface-neutral-primary);
+  font: inherit;
+  font-size: var(--dd-font);
+  line-height: var(--dd-line);
+  font-weight: var(--font-style-regular);
+  text-align: left;
+  cursor: pointer;
+}
+.value,
+.placeholder {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.value {
+  color: var(--foreground-neutral-primary);
+}
+.placeholder {
+  color: var(--foreground-neutral-quaternary);
+}
+.arrow {
+  color: var(--foreground-neutral-quaternary);
+}
+
+/* State=Hover */
+.root:not(.disabled):not(.open) .field:hover {
+  --dd-border: var(--border-neutral-strong);
+}
+/* State=Open, 키보드 포커스(코드에만, TextField 포커스와 같음) */
+.open .field,
+.field:focus-visible {
+  --dd-border: var(--border-brand-primary);
+  outline: none;
+}
+/* State=Disabled */
+.disabled .field {
+  --dd-border: var(--border-neutral-secondary);
+  background-color: var(--surface-neutral-secondary);
+  cursor: not-allowed;
+}
+.disabled .value,
+.disabled .placeholder,
+.disabled .arrow {
+  color: var(--foreground-neutral-subtle);
+}
+
+/* ---------- 열린 목록 (Figma Dropdown Menu) ---------- */
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-sizing: border-box;
+  margin: var(--spacing-scale-0);
+  padding: var(--spacing-scale-0);
+  list-style: none;
+  /* 선택지 최대 5개까지 보이고 넘으면 목록 안에서 스크롤 */
+  max-height: calc(var(--dd-height) * 5 + var(--size-border-default));
+  overflow-y: auto;
+  border: var(--size-border-default) solid var(--border-brand-primary);
+  border-top: 0;
+  background-color: var(--surface-neutral-primary);
+}
+.menu[hidden] {
+  display: none;
+}
+
+/* ---------- 선택지 한 줄 (Figma Dropdown Option) ---------- */
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-scale-8);
+  height: var(--dd-height);
+  padding: 0 var(--dd-pad);
+  color: var(--foreground-neutral-secondary);
+  font-size: var(--dd-font);
+  line-height: var(--dd-line);
+  font-weight: var(--font-style-regular);
+  cursor: pointer;
+}
+.optionLabel {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* State=Hover: 마우스나 키보드로 가리킨 줄 */
+.active {
+  background-color: var(--interaction-brand-subtle-hover);
+}
+/* Selected=On: 오른쪽 체크 */
+.check {
+  color: var(--foreground-brand-primary);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: var(--size-border-default);
+  height: var(--size-border-default);
+  margin: var(--spacing-scale-0);
+  padding: var(--spacing-scale-0);
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (forced-colors: active) {
+  .active {
+    outline: var(--size-border-thick) solid Highlight;
+  }
+}

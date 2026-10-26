@@ -151,6 +151,9 @@ export const colorTokens = {
   "Chart/Event/Series4": "var(--chart-event-series-4)",
   "Chart/Area/Start": "var(--chart-area-start)",
   "Chart/Area/End": "var(--chart-area-end)",
+  "Foreground/Positive/Strong": "var(--foreground-positive-strong)",
+  "Foreground/Brand/Strong": "var(--foreground-brand-strong)",
+  "Surface/Negative/Strong": "var(--surface-negative-strong)",
 } as const;
 
 export const foundationTokens = {
@@ -233,6 +236,15 @@ export const foundationTokens = {
   "Font/LineHeight/36": "var(--font-line-height-36)",
   "Font/LineHeight/72": "var(--font-line-height-72)",
   "Font/LetterSpacing/Default": "var(--font-letter-spacing-default)",
+  "Size/Width/Navigation": "var(--size-width-navigation)",
+  "Size/Width/DialogSmall": "var(--size-width-dialog-small)",
+  "Size/Width/DialogMedium": "var(--size-width-dialog-medium)",
+  "Size/Width/DialogLarge": "var(--size-width-dialog-large)",
+  "Size/Width/DialogButton": "var(--size-width-dialog-button)",
+  "Size/Width/DialogButtonWide": "var(--size-width-dialog-button-wide)",
+  "Size/Height/DialogSmall": "var(--size-height-dialog-small)",
+  "Size/Height/DialogMedium": "var(--size-height-dialog-medium)",
+  "Size/Height/DialogLarge": "var(--size-height-dialog-large)",
 } as const;
 
 export const effectTokens = {

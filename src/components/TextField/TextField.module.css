@@ -4,9 +4,11 @@
  */
 
 .root {
-  --tf-border: var(--border-neutral-tertiary);
+  /* 기본 테두리는 연한 회색. 마우스 올림(#494949)과 구분되게(2026-10-27 결정) */
+  --tf-border: var(--border-neutral-secondary);
   --tf-bg: var(--surface-neutral-primary);
-  --tf-text: var(--foreground-neutral-secondary);
+  /* 입력값은 가장 진한 글자색(시안 그대로, 안내 문구와 구분되게, 2026-10-27 결정) */
+  --tf-text: var(--foreground-neutral-primary);
   --tf-placeholder: var(--foreground-neutral-quaternary);
   --tf-icon: var(--foreground-neutral-quaternary);
   --tf-message: var(--foreground-neutral-quaternary);

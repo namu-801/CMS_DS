@@ -152,6 +152,9 @@
   --chart-event-series-4: var(--navy-300);
   --chart-area-start: var(--purple-100);
   --chart-area-end: #ffffff00;
+  --foreground-positive-strong: var(--green-700);
+  --foreground-brand-strong: var(--purple-600);
+  --surface-negative-strong: var(--red-600);
 
   /* Foundation */
   --spacing-scale-0: 0;
@@ -233,6 +236,15 @@
   --font-line-height-36: 54px;
   --font-line-height-72: 101px;
   --font-letter-spacing-default: 0;
+  --size-width-navigation: 260px;
+  --size-width-dialog-small: 400px;
+  --size-width-dialog-medium: 680px;
+  --size-width-dialog-large: 1100px;
+  --size-width-dialog-button: 100px;
+  --size-width-dialog-button-wide: 216px;
+  --size-height-dialog-small: 480px;
+  --size-height-dialog-medium: 480px;
+  --size-height-dialog-large: 700px;
 
   /* Effect (Figma Effect Style) */
   --elevation-low: 0 1px 2px 1.16px rgba(0, 0, 0, 0.15);

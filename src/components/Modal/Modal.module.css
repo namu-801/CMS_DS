@@ -1,0 +1,132 @@
+/*
+ * Figma `Modal Header`·`Modal Footer`·`Alert Dialog`(247:16197)을 옮긴 스타일입니다. 토큰만 씁니다.
+ * 팝업 높이(Size/Height/Dialog*)와 버튼 너비(Size/Width/DialogButton·Wide)도 토큰을 씁니다(2026-10-27 추가).
+ */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-scale-16);
+  background-color: var(--surface-dim-primary);
+  font-family: var(--font-family-base);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+
+/* ---------- 입력 팝업 ---------- */
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius-scale-0);
+  background-color: var(--surface-neutral-primary);
+}
+.small {
+  max-width: var(--size-width-dialog-small);
+  height: var(--size-height-dialog-small);
+}
+.medium {
+  max-width: var(--size-width-dialog-medium);
+  height: var(--size-height-dialog-medium);
+}
+.large {
+  max-width: var(--size-width-dialog-large);
+  height: var(--size-height-dialog-large);
+}
+.dialog:focus-visible,
+.alert:focus-visible {
+  outline: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex: none;
+  height: var(--size-height-bar);
+  padding: 0 var(--spacing-scale-24);
+  background-color: var(--surface-brand-strong);
+}
+.title {
+  margin: var(--spacing-scale-0);
+  overflow: hidden;
+  color: var(--foreground-neutral-inverse);
+  font-size: var(--font-size-20);
+  line-height: var(--font-line-height-20);
+  font-weight: var(--font-style-medium);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--spacing-scale-32) var(--spacing-scale-40);
+}
+.footer > *,
+.alertButtons[data-buttons="two"] > * {
+  width: var(--size-width-dialog-button);
+}
+.alertButtons[data-buttons="one"] > * {
+  width: var(--size-width-dialog-button-wide);
+}
+.footer {
+  display: flex;
+  flex: none;
+  justify-content: flex-end;
+  gap: var(--spacing-scale-16);
+  padding: var(--spacing-scale-12) var(--spacing-scale-40) var(--spacing-scale-20);
+  border-top: var(--size-border-default) solid var(--border-neutral-secondary);
+}
+
+/* ---------- 확인 모달 ---------- */
+
+.alert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-scale-36);
+  width: 100%;
+  max-width: var(--size-width-dialog-small);
+  padding: var(--spacing-scale-36) var(--spacing-scale-40) var(--spacing-scale-24);
+  border-radius: var(--radius-scale-0);
+  background-color: var(--surface-neutral-primary);
+  box-sizing: border-box;
+}
+.alertContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-scale-20);
+  width: 100%;
+}
+.alertText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-scale-4);
+  width: 100%;
+  text-align: center;
+}
+.alertTitle {
+  margin: var(--spacing-scale-0);
+  color: var(--foreground-neutral-secondary);
+  font-size: var(--font-size-22);
+  line-height: var(--font-line-height-22);
+  font-weight: var(--font-style-semi-bold);
+}
+.alertDescription {
+  margin: var(--spacing-scale-0);
+  color: var(--foreground-neutral-quaternary);
+  font-size: var(--font-size-16);
+  line-height: var(--font-line-height-16);
+  font-weight: var(--font-style-regular);
+  white-space: pre-line;
+}
+.alertButtons {
+  display: flex;
+  gap: var(--spacing-scale-16);
+}

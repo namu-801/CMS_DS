@@ -1,0 +1,164 @@
+/*
+ * Figma `Tag`·`Status Badge`·`Status Text`·`Event Label`·`Count Badge`를 옮긴 스타일입니다.
+ * 색·간격·모서리·크기·글자는 모두 src/tokens/tokens.css의 토큰만 씁니다. 원시 값을 넣지 마세요.
+ */
+
+.label {
+  white-space: nowrap;
+}
+
+/* ---------- Tag ---------- */
+
+.tag {
+  --tag-bg: var(--surface-neutral-quaternary);
+  --tag-fg: var(--foreground-neutral-tertiary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-scale-0);
+  height: var(--size-height-badge);
+  padding: 0 var(--spacing-scale-4) 0 var(--spacing-scale-2);
+  border-radius: var(--radius-scale-6);
+  background-color: var(--tag-bg);
+  color: var(--tag-fg);
+  /* 위치 핀 아이콘의 주색도 글자색과 같게 */
+  --icon-accent: var(--tag-fg);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-13);
+  line-height: var(--font-line-height-13);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.gps {
+  --tag-bg: var(--surface-positive-secondary);
+  --tag-fg: var(--foreground-positive-strong);
+}
+.time {
+  --tag-bg: var(--surface-brand-quaternary);
+  --tag-fg: var(--foreground-brand-strong);
+}
+.neutral {
+  --tag-bg: var(--surface-neutral-quaternary);
+  --tag-fg: var(--foreground-neutral-tertiary);
+}
+
+/* ---------- Status Badge ---------- */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-scale-6);
+  height: var(--size-height-badge);
+  padding: 0 var(--spacing-scale-12);
+  border-radius: var(--radius-scale-full);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+/* 점 6은 그림 크기(토큰 없음). 같은 값의 Spacing/Scale/6을 씀 */
+.dot {
+  width: var(--spacing-scale-6);
+  height: var(--spacing-scale-6);
+  border-radius: var(--radius-scale-full);
+  flex: none;
+}
+.pill.positive {
+  background-color: var(--surface-positive-secondary);
+  color: var(--foreground-positive-strong);
+}
+.pill.positive .dot {
+  background-color: var(--surface-positive-primary);
+}
+.pill.negative {
+  background-color: var(--surface-negative-secondary);
+  color: var(--foreground-negative-strong);
+}
+.pill.negative .dot {
+  background-color: var(--surface-negative-primary);
+}
+
+/* ---------- Status Text ---------- */
+
+.statusText {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-scale-8);
+  height: var(--size-height-badge);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-15);
+  line-height: var(--font-line-height-15);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.statusText.success {
+  color: var(--foreground-success-strong);
+}
+.statusText.fail {
+  color: var(--foreground-negative-strong);
+}
+
+/* ---------- Event Label ---------- */
+
+.eventLabel {
+  display: inline-flex;
+  align-items: center;
+  height: var(--size-height-badge);
+  padding: 0 var(--spacing-scale-6);
+  border-radius: var(--radius-scale-2);
+  color: var(--foreground-neutral-inverse);
+  white-space: nowrap;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.eventLabel.danger {
+  background-color: var(--surface-negative-strong);
+}
+.eventLabel.warning {
+  background-color: var(--surface-warning-primary);
+}
+.eventLabel.caution {
+  background-color: var(--surface-warning-secondary);
+}
+
+/* ---------- Count Badge ---------- */
+
+.count {
+  display: inline-flex;
+  align-items: center;
+  height: var(--size-height-badge);
+  padding: 0 var(--spacing-scale-6);
+  border-radius: var(--radius-scale-2);
+  background-color: var(--surface-neutral-tertiary);
+  color: var(--foreground-neutral-tertiary);
+  white-space: nowrap;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-semi-bold);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: var(--size-border-default);
+  height: var(--size-border-default);
+  margin: var(--spacing-scale-0);
+  padding: var(--spacing-scale-0);
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (forced-colors: active) {
+  .tag,
+  .pill,
+  .eventLabel,
+  .count {
+    border: var(--size-border-default) solid CanvasText;
+  }
+}

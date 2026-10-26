@@ -1,0 +1,74 @@
+/*
+ * Figma `Pagination`·`Pagination Item`(239:16033)을 옮긴 스타일입니다. 토큰만 씁니다.
+ * 이전·다음은 Button(Plain·Small)을 그대로 씁니다.
+ */
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-scale-8);
+  font-family: var(--font-family-base);
+  letter-spacing: var(--font-letter-spacing-default);
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-scale-8);
+  margin: var(--spacing-scale-0);
+  padding: var(--spacing-scale-0);
+  list-style: none;
+}
+
+/* 번호 칸: 높이 40, 최소 너비 40, 숫자가 길면 늘어남 */
+.item {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--size-height-control-small);
+  height: var(--size-height-control-small);
+  margin: var(--spacing-scale-0);
+  padding: 0 var(--spacing-scale-12);
+  border: 0;
+  border-radius: var(--radius-scale-0);
+  background-color: transparent;
+  color: var(--foreground-neutral-quaternary);
+  font: inherit;
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+  font-weight: var(--font-style-medium);
+  cursor: pointer;
+}
+/* State=Hover: 연보라 배경(탭·드롭다운과 같은 마우스 올림 색) */
+.item:not([aria-current="page"]):hover {
+  background-color: var(--interaction-brand-subtle-hover);
+  color: var(--foreground-neutral-tertiary);
+}
+/* State=Selected */
+.item[aria-current="page"] {
+  background-color: var(--surface-brand-strong);
+  color: var(--foreground-neutral-inverse);
+  font-weight: var(--font-style-semi-bold);
+  cursor: default;
+}
+.item:focus-visible {
+  outline: var(--size-border-thick) solid var(--border-brand-primary);
+  outline-offset: var(--spacing-scale-2);
+}
+
+.ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--size-height-control-small);
+  height: var(--size-height-control-small);
+  color: var(--foreground-neutral-quaternary);
+  font-size: var(--font-size-14);
+  line-height: var(--font-line-height-14);
+}
+
+@media (forced-colors: active) {
+  .item[aria-current="page"] {
+    outline: var(--size-border-thick) solid Highlight;
+  }
+}

@@ -4,6 +4,7 @@ import { IconButton, ICON_BUTTON_VARIANTS } from "@/components/IconButton";
 import { TextField, TEXT_FIELD_SIZES } from "@/components/TextField";
 import { Radio, RadioGroup } from "@/components/Radio";
 import { Checkbox } from "@/components/Checkbox";
+import { NewDemos } from "./demos/NewDemos";
 import styles from "./App.module.css";
 
 /** Figma Button 세트와 나란히 비교하기 위한 확인용 화면 */
@@ -128,6 +129,7 @@ export function App() {
           message="약관에 동의해 주세요."
         />
       </section>
+      <NewDemos />
     </main>
   );
 }

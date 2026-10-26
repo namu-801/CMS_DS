@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>검토 2차 비교</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root { --bg:#EAEDF2; --card:#FFFFFF; --ink:#2D2D2D; --sub:#767676; --line:#E5E5E5; --ok:#0B7A3E; --ng:#C61529; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo",sans-serif; }
+  main { max-width:1180px; margin:0 auto; padding:40px 16px 80px; }
+  h1 { font-size:30px; margin:0 0 8px; }
+  .lead { color:#494949; margin:0 0 32px; line-height:1.6; }
+  section { background:var(--card); padding:32px; margin-bottom:28px; }
+  h2 { font-size:22px; margin:0 0 6px; }
+  h3 { font-size:16px; margin:28px 0 6px; }
+  .desc { color:#494949; font-size:14px; margin:0 0 16px; line-height:1.6; }
+  .grid { display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; }
+  .opt { display:flex; flex-direction:column; gap:10px; min-width:210px; max-width:300px; }
+  .opt .name { font-size:13px; font-weight:600; }
+  .opt .note { font-size:12px; color:var(--sub); line-height:1.5; }
+  .rec { outline:3px solid #7778FD; outline-offset:8px; }
+  .tagrec { display:inline-block; font-size:11px; font-weight:700; color:#fff; background:#5D5FEF; padding:2px 6px; margin-left:6px; }
+  .sw { display:flex; align-items:center; gap:8px; font-size:12px; flex-wrap:wrap; }
+  .sw i { display:inline-block; width:28px; height:28px; border:1px solid rgba(0,0,0,.12); flex:none; }
+  .sw b { font-weight:600; }
+  .sw span { color:var(--sub); }
+  .pass,.fail { display:inline-block; font-size:12px; font-weight:700; padding:3px 8px; }
+  .pass { background:#E6F4EC; color:var(--ok); }
+  .fail { background:#FFEFF0; color:var(--ng); }
+  .field { width:300px; height:52px; border:1px solid #D6D6D6; display:flex; align-items:center; padding:0 20px; font-size:15px; background:#fff; }
+  .stack { display:flex; flex-direction:column; gap:10px; }
+  .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  .chip { display:inline-flex; align-items:center; gap:6px; height:24px; padding:0 6px; font-size:14px; font-weight:600; border-radius:2px; white-space:nowrap; }
+  .icon { display:inline-flex; width:20px; height:20px; border-radius:50%; align-items:center; justify-content:center; color:#fff; font-size:12px; font-weight:700; flex:none; }
+  .tab { width:122px; font-size:14px; font-weight:600; text-align:center; background:#F3F3FF; }
+  .tab div { padding:12px 0; }
+  .pg { display:flex; gap:8px; align-items:center; font-size:15px; font-weight:600; }
+  .pg .n { width:40px; height:40px; display:flex; align-items:center; justify-content:center; color:#767676; }
+  .pg .t { color:#767676; padding:0 8px; }
+  .same { display:flex; flex-wrap:wrap; gap:24px; margin-top:12px; }
+  .same .box { display:flex; flex-direction:column; gap:8px; font-size:12px; color:var(--sub); }
+  .dd { width:164px; border:1px solid #7778FD; background:#fff; font-size:15px; }
+  .dd div { height:44px; display:flex; align-items:center; padding:0 16px; }
+  table.t { border-collapse:collapse; width:100%; font-size:13px; }
+  table.t td, table.t th { border-bottom:1px solid var(--line); padding:10px 8px; text-align:left; vertical-align:middle; }
+  table.t th { color:var(--sub); font-weight:600; }
+  .ans { background:#F3F3FF; border-left:4px solid #7778FD; padding:14px 16px; font-size:14px; line-height:1.7; margin:12px 0 0; }
+  @media (max-width:640px) { section { padding:20px; } .field { width:100%; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>검토 2차 · 남은 질문</h1>
+  <p class="lead">정해 주신 것은 Figma에 반영했습니다(맨 아래 표). 아래 다섯 가지는 다시 여쭙거나 답을 드리는 부분입니다. 보라 테두리 칸이 추천안입니다.</p>
+
+  <!-- A TextField conflict -->
+  <section>
+    <h2>A. TextField 입력값 글자색 — 두 답이 달라요</h2>
+    <p class="desc">0번에서 "B. 시안 그대로(#111111)"를, 아래 표에서 "입력값 글자 #2D2D2D"를 고르셨습니다. 둘 중 하나만 정해 주세요. (기본 테두리는 말씀대로 #D6D6D6로 바꿨습니다.)</p>
+    <div class="grid">
+      <div class="opt rec"><div class="name">B · #111111 (시안 그대로)<span class="tagrec">추천</span></div><div class="stack"><div class="field" style="color:#767676">이메일을 입력해 주세요</div><div class="field" style="color:#111111">mabasan@company.com</div></div><div class="sw"><i style="background:#111111"></i><b>#111111</b><span>Foreground/Neutral/Primary</span></div><div class="note">안내 문구와 차이가 가장 큼</div></div>
+      <div class="opt"><div class="name">#2D2D2D (지금)</div><div class="stack"><div class="field" style="color:#767676">이메일을 입력해 주세요</div><div class="field" style="color:#2D2D2D">mabasan@company.com</div></div><div class="sw"><i style="background:#2D2D2D"></i><b>#2D2D2D</b><span>Foreground/Neutral/Secondary</span></div><div class="note">처음에 "흐릿하다"고 하신 지금 모습</div></div>
+    </div>
+  </section>
+
+  <!-- B T3 / T4 -->
+  <section>
+    <h2>B. T3 실패 글자 · T4와 같은 빨강인지</h2>
+    <p class="desc">네, 같은 빨강(Red600)입니다. "새 토큰"이라고 했던 것은 새 색이 아니라 <b>새 이름</b>입니다. 같은 색이라도 "글자용 이름"과 "배경용 이름"을 따로 둡니다.</p>
+    <table class="t">
+      <tr><th>색</th><th>글자용 이름 (Foreground)</th><th>배경용 이름 (Surface)</th></tr>
+      <tr><td><div class="sw"><i style="background:#C61529"></i><b>Red600 #C61529</b></div></td><td><b>Foreground/Negative/Strong</b> — 이미 있음 (TextField 오류 문구)</td><td><b>Surface/Negative/Strong</b> — 없었음 → 이번 T4 결정으로 오늘 만듦</td></tr>
+    </table>
+    <div class="ans">그래서 <b>T3(실패 글자)는 새 토큰 없이</b> 이미 있는 글자용 빨강을 바로 쓸 수 있습니다. Red 단계 중에서 고르면 아래와 같습니다.</div>
+    <h3>Red 단계로 쓴 실패 글자 (아이콘은 주황 그대로)</h3>
+    <div class="grid">
+      <div class="opt"><div class="name">Red400 #F7605F</div><div class="row"><span class="icon" style="background:#FF6730">×</span><span style="color:#F7605F;font-weight:600;font-size:15px">다운로드 실패</span></div><div class="sw"><i style="background:#F7605F"></i><span class="fail">3.09</span></div></div>
+      <div class="opt"><div class="name">Red500 #EE293A</div><div class="row"><span class="icon" style="background:#FF6730">×</span><span style="color:#EE293A;font-weight:600;font-size:15px">다운로드 실패</span></div><div class="sw"><i style="background:#EE293A"></i><span class="fail">4.19</span><span>Foreground/Negative/Primary</span></div></div>
+      <div class="opt rec"><div class="name">Red600 #C61529<span class="tagrec">추천</span></div><div class="row"><span class="icon" style="background:#FF6730">×</span><span style="color:#C61529;font-weight:600;font-size:15px">다운로드 실패</span></div><div class="sw"><i style="background:#C61529"></i><span class="pass">5.93</span><span>Foreground/Negative/Strong (있음)</span></div><div class="note">오류 문구·위험 라벨과 같은 빨강</div></div>
+      <div class="opt"><div class="name">Red700 #9C101D</div><div class="row"><span class="icon" style="background:#FF6730">×</span><span style="color:#9C101D;font-weight:600;font-size:15px">다운로드 실패</span></div><div class="sw"><i style="background:#9C101D"></i><span class="pass">8.38</span><span>토큰 없음</span></div><div class="note">너무 어두워 갈색처럼 보임</div></div>
+    </div>
+    <p class="desc" style="margin-top:16px">참고: 실패 아이콘은 색이 고정된 주황(×)이라, 글자를 빨강으로 바꾸면 아이콘(주황)과 글자(빨강)가 살짝 다른 색이 됩니다.</p>
+  </section>
+
+  <!-- C T5 -->
+  <section>
+    <h2>C. T5 막대 두께 · 있는 토큰으로 쓸 방법</h2>
+    <p class="desc">두께용 크기 토큰은 1(Size/Border/Default)과 2(Size/Border/Thick)뿐입니다. 6을 지키면서 있는 토큰을 쓰려면 <b>간격 토큰 Spacing/Scale/6</b>을 두께에 연결하는 방법이 있습니다.</p>
+    <div class="grid">
+      <div class="opt"><div class="name">① Size/Border/Thick (2)</div><div class="tab"><div>위치 설정</div><div style="height:2px;background:#7778FD"></div></div><div class="note">있는 두께 토큰. 시안보다 많이 얇아짐</div></div>
+      <div class="opt rec"><div class="name">② Spacing/Scale/6 (6)<span class="tagrec">추천</span></div><div class="tab"><div>위치 설정</div><div style="height:6px;background:#7778FD"></div></div><div class="note">있는 토큰, 시안 두께 유지. 간격 토큰을 두께에 빌려 쓰는 것이라 "간격 6"을 바꾸면 막대도 같이 바뀜(6은 바뀔 일이 거의 없음)</div></div>
+      <div class="opt"><div class="name">③ 새 토큰 Size/Indicator (6)</div><div class="tab"><div>위치 설정</div><div style="height:6px;background:#7778FD"></div></div><div class="note">이름이 뜻과 정확히 맞음. 토큰이 하나 늘어남</div></div>
+    </div>
+  </section>
+
+  <!-- D Pagination -->
+  <section>
+    <h2>D. Pagination · 마우스 올림을 연보라로</h2>
+    <p class="desc">좋은 생각입니다. 우리 시스템에서 연보라(#F3F3FF)는 이미 "마우스 올림" 색으로 여러 곳에 쓰입니다. 페이지 번호도 같으면 통일됩니다. "2"에 마우스를 올린 모습입니다.</p>
+    <div class="grid">
+      <div class="opt"><div class="name">지금 · 연보라 + 보라 테두리</div><div class="pg"><span class="t">‹ 이전</span><span class="n" style="background:#5D5FEF;color:#fff">1</span><span class="n" style="background:#F3F3FF;border:1px solid #7778FD">2</span><span class="n">3</span><span class="t">다음 ›</span></div><div class="note">테두리가 있어 선택된 것처럼 보이기도 함</div></div>
+      <div class="opt"><div class="name">회색 (이전 추천)</div><div class="pg"><span class="t">‹ 이전</span><span class="n" style="background:#5D5FEF;color:#fff">1</span><span class="n" style="background:#E5E5E5">2</span><span class="n">3</span><span class="t">다음 ›</span></div><div class="note">버튼 Plain과 같지만 주변 보라와 어울리지 않음</div></div>
+      <div class="opt rec"><div class="name">연보라만 (말씀하신 안)<span class="tagrec">추천</span></div><div class="pg"><span class="t">‹ 이전</span><span class="n" style="background:#5D5FEF;color:#fff">1</span><span class="n" style="background:#F3F3FF;color:#494949">2</span><span class="n">3</span><span class="t">다음 ›</span></div><div class="sw"><i style="background:#F3F3FF"></i><b>#F3F3FF</b><span>Interaction/Brand/SubtleHover</span></div><div class="note">글자는 탭 마우스 올림처럼 #494949로 한 단계 진하게(#767676이면 연보라 위 4.13으로 미달)</div></div>
+    </div>
+    <h3>같은 연보라 마우스 올림을 쓰는 곳</h3>
+    <div class="same">
+      <div class="box"><div class="tab" style="color:#494949"><div>시간 설정</div><div style="height:6px"></div></div>탭</div>
+      <div class="box"><div class="dd"><div>전체</div><div style="background:#F3F3FF">운행 중</div><div>대기</div></div>드롭다운 선택지</div>
+      <div class="box"><div style="height:40px;padding:0 16px;display:flex;align-items:center;border:1px solid #7778FD;background:#F3F3FF;color:#5D5FEF;font-weight:600;font-size:15px">중복확인</div>OutlineBrand 버튼</div>
+    </div>
+  </section>
+
+  <!-- E Event label -->
+  <section>
+    <h2>E. 이벤트 라벨 · 반영한 결과 확인</h2>
+    <p class="desc">"A. 모두 흰 글자"와 "T4 위험 배경 #C61529"를 함께 적용하면 아래처럼 됩니다. 주의 배경은 시안 #FAC437이 토큰에 없어 가장 가까운 Yellow500 #EEC048을 썼습니다.</p>
+    <div class="row"><span class="chip" style="background:#C61529;color:#fff">위험</span><span class="chip" style="background:#EC7C3D;color:#fff">경고</span><span class="chip" style="background:#EEC048;color:#fff">주의</span></div>
+    <div class="row" style="margin-top:10px"><span class="pass">5.93</span><span class="fail">2.79</span><span class="fail">1.71</span></div>
+    <p class="desc" style="margin-top:12px">경고·주의는 흰 글자 대비가 기준에 못 미칩니다(결정하신 대로 유지). 라벨 옆에 "네트워크 오류" 같은 글자가 항상 함께 있어 뜻은 전달됩니다.</p>
+  </section>
+
+  <!-- applied -->
+  <section>
+    <h2>반영한 것</h2>
+    <table class="t">
+      <tr><th>항목</th><th>결과</th></tr>
+      <tr><td>TextField 기본 테두리</td><td><div class="sw"><i style="background:#D6D6D6"></i><b>#D6D6D6</b><span>Figma 8개 + 코드 반영, Dropdown 기본 테두리도 같이</span></div></td></tr>
+      <tr><td>마우스 올림 · 입력 중 · 오류 · 성공</td><td><div class="row"><div class="sw"><i style="background:#494949"></i><b>#494949</b></div><div class="sw"><i style="background:#7778FD"></i><b>#7778FD</b></div><div class="sw"><i style="background:#C61529"></i><b>#C61529</b></div><div class="sw"><i style="background:#0B6CA9"></i><b>#0B6CA9</b></div><span style="color:#767676;font-size:12px">그대로 유지</span></div></td></tr>
+      <tr><td>T1 초록 글자</td><td><div class="row"><span class="chip" style="background:#E9F6F4;color:#01644B;border-radius:6px;font-size:13px">GPS</span><div class="sw"><i style="background:#01644B"></i><b>#01644B</b><span>새 이름 Foreground/Positive/Strong</span></div></div></td></tr>
+      <tr><td>T2 보라 글자</td><td><div class="row"><span class="chip" style="background:#E5E5FF;color:#4747CA;border-radius:6px;font-size:13px">16:00:00 ~ 16:30:00</span><div class="sw"><i style="background:#4747CA"></i><b>#4747CA</b><span>새 이름 Foreground/Brand/Strong</span></div></div></td></tr>
+      <tr><td>T4 위험 라벨 배경</td><td><div class="row"><span class="chip" style="background:#C61529;color:#fff">위험</span><div class="sw"><i style="background:#C61529"></i><b>#C61529</b><span>새 이름 Surface/Negative/Strong</span></div></div></td></tr>
+      <tr><td>Badge D</td><td>운행 상태 알약 높이 24 + 글자 14. 같은 이유로 이벤트 라벨·"+N"도 글자 14(시안 그대로)</td></tr>
+      <tr><td>Badge B · G</td><td>GPS 태그는 연한형 하나 · 값 없음은 회색 "-"</td></tr>
+      <tr><td>네비게이션바 마우스 올림</td><td><div class="sw"><i style="background:#2D498D"></i><b>#2D498D</b><span>유지</span></div></td></tr>
+    </table>
+  </section>
+</main>
+</body>
+</html>

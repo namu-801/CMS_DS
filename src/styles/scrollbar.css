@@ -1,0 +1,21 @@
+/*
+ * Figma `Scrollbar`(252:16373)를 코드로 옮긴 전역 스타일입니다. 컴포넌트가 아니라 브라우저 스크롤바 모양만 바꿉니다.
+ * 막대 색 Border/Neutral/Tertiary, 트랙 없음, 모서리 둥글게. 두께 4는 그림 크기(토큰 없음)라 같은 값의 Spacing/Scale/4를 씁니다.
+ */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-neutral-tertiary) transparent;
+}
+
+::-webkit-scrollbar {
+  width: var(--spacing-scale-4);
+  height: var(--spacing-scale-4);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: var(--radius-scale-full);
+  background-color: var(--border-neutral-tertiary);
+}

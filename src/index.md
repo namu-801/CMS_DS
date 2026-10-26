@@ -21,7 +21,16 @@
 | TextField | 한 줄 입력창 | [16_텍스트필드_계약.md](../design-system/16_텍스트필드_계약.md) | [src/components/TextField](components/TextField) |
 | Radio | 여러 선택지 중 하나 고르기(`Radio` + `RadioGroup`) | [19_라디오_계약.md](../design-system/19_라디오_계약.md) | [src/components/Radio](components/Radio) |
 | Checkbox | 항목 하나를 켜고 끄기(오류 문구 포함) | [22_체크박스_계약.md](../design-system/22_체크박스_계약.md) | [src/components/Checkbox](components/Checkbox) |
-| Icon | 장식용 아이콘(다른 컴포넌트 안에서 씀). 계약 대신 네이밍 규칙 | [07_아이콘_네이밍_규칙.md](../design-system/07_아이콘_네이밍_규칙.md) | [src/components/Icon](components/Icon) |
+| Dropdown | 목록에서 값 하나 고르기 | [40_드롭다운_계약.md](../design-system/40_드롭다운_계약.md) | [src/components/Dropdown](components/Dropdown) |
+| Badge | 보여 주기만 하는 표시: Tag·StatusBadge·StatusText·EventLabel·CountBadge | [41_배지_계약.md](../design-system/41_배지_계약.md) | [src/components/Badge](components/Badge) |
+| Avatar | 둥근 프로필 사진(20·36) | [42_아바타_계약.md](../design-system/42_아바타_계약.md) | [src/components/Avatar](components/Avatar) |
+| Tabs | 같은 자리 내용 전환(가로·세로) | [43_탭_계약.md](../design-system/43_탭_계약.md) | [src/components/Tabs](components/Tabs) |
+| Pagination | 표 아래 페이지 이동 | [44_페이지네이션_계약.md](../design-system/44_페이지네이션_계약.md) | [src/components/Pagination](components/Pagination) |
+| Table | 목록 표(머리 칸·행·칸, 앞·뒤 부품) | [45_테이블_계약.md](../design-system/45_테이블_계약.md) | [src/components/Table](components/Table) |
+| Modal | Dialog(입력 팝업)·AlertDialog(확인 모달) | [46_모달_계약.md](../design-system/46_모달_계약.md) | [src/components/Modal](components/Modal) |
+| Navigation | 좌측 네비게이션바·메뉴 항목·상단 바·화면 제목 | [47_좌측네비게이션바_계약.md](../design-system/47_좌측네비게이션바_계약.md) | [src/components/Navigation](components/Navigation) |
+| Scrollbar | 스크롤바 모양(전역 스타일, 컴포넌트 아님) | [48_스크롤바_계약.md](../design-system/48_스크롤바_계약.md) | [src/styles/scrollbar.css](styles/scrollbar.css) |
+| Icon | 장식용 아이콘·픽토그램(다른 컴포넌트 안에서 씀). 계약 대신 네이밍 규칙 | [07_아이콘_네이밍_규칙.md](../design-system/07_아이콘_네이밍_규칙.md) | [src/components/Icon](components/Icon) |
 
 ## 컴포넌트를 정한 근거 (조사 → 스펙안)
 
@@ -30,6 +39,15 @@
 - [14_텍스트필드_조사.md](../design-system/14_텍스트필드_조사.md) · [15_텍스트필드_스펙안.md](../design-system/15_텍스트필드_스펙안.md) — TextField를 조사하고 결정한 기록.
 - [17_라디오_조사.md](../design-system/17_라디오_조사.md) · [18_라디오_스펙안.md](../design-system/18_라디오_스펙안.md) — Radio를 조사하고 결정한 기록.
 - [20_체크박스_조사.md](../design-system/20_체크박스_조사.md) · [21_체크박스_스펙안.md](../design-system/21_체크박스_스펙안.md) — Checkbox를 조사하고 결정한 기록.
+- [38_일괄작업_검토표.md](../design-system/38_일괄작업_검토표.md) — 아래 컴포넌트들은 2026-10-27 일괄 작업(조사·스펙·Figma·코드·계약)으로 만들었습니다. 코드 대응표 [39_코드구현_대응표.md](../design-system/39_코드구현_대응표.md).
+- [23_드롭다운_조사.md](../design-system/23_드롭다운_조사.md) · [24_드롭다운_스펙안.md](../design-system/24_드롭다운_스펙안.md) — Dropdown(검토 전).
+- [25_배지_조사.md](../design-system/25_배지_조사.md) · [26_배지_스펙안.md](../design-system/26_배지_스펙안.md) — Badge·Tag(검토 전).
+- [27_탭_조사.md](../design-system/27_탭_조사.md) · [28_탭_스펙안.md](../design-system/28_탭_스펙안.md) — Tab(검토 전).
+- [29_페이지네이션_조사.md](../design-system/29_페이지네이션_조사.md) · [30_페이지네이션_스펙안.md](../design-system/30_페이지네이션_스펙안.md) — Pagination(검토 전).
+- [31_테이블_조사.md](../design-system/31_테이블_조사.md) · [32_테이블_스펙안.md](../design-system/32_테이블_스펙안.md) — Table(검토 전).
+- [33_모달_조사.md](../design-system/33_모달_조사.md) · [34_모달_스펙안.md](../design-system/34_모달_스펙안.md) — Modal(검토 전).
+- [35_좌측네비게이션바_조사.md](../design-system/35_좌측네비게이션바_조사.md) · [36_좌측네비게이션바_스펙안.md](../design-system/36_좌측네비게이션바_스펙안.md) — 좌측 네비게이션바·상단 바·화면 제목(검토 전).
+- [37_스크롤바_목록항목_지도표시_검토.md](../design-system/37_스크롤바_목록항목_지도표시_검토.md) — Scrollbar(만듦)·List Item·Map Marker(만들지 않음) 판단(검토 전).
 - [06_아이콘_조사.md](../design-system/06_아이콘_조사.md) — 시안 아이콘 조사.
 
 ## 기초 정리 기록

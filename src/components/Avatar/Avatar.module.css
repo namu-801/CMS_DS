@@ -1,0 +1,21 @@
+/*
+ * Figma `Avatar` 세트(257:16453)를 옮긴 스타일입니다. 토큰만 씁니다.
+ */
+
+.avatar {
+  display: block;
+  flex: none;
+  box-sizing: border-box;
+  object-fit: cover;
+  border: var(--size-border-default) solid var(--border-neutral-primary);
+  border-radius: var(--radius-scale-full);
+  background-color: var(--surface-neutral-tertiary);
+}
+.small {
+  width: var(--size-icon-small);
+  height: var(--size-icon-small);
+}
+.large {
+  width: var(--size-icon-x-large);
+  height: var(--size-icon-x-large);
+}

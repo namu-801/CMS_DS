@@ -27,3 +27,9 @@
   width: var(--size-icon-x-large);
   height: var(--size-icon-x-large);
 }
+
+/* 픽토그램 48: 그림 크기 토큰이 없어 같은 값의 Size/Hit/Large(48)를 씀 */
+.pictogram {
+  width: var(--size-hit-large);
+  height: var(--size-hit-large);
+}
